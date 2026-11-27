@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# IDE & editor
+.idea/
+.vscode/
+*.swp
+
+# Testing & caches
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Large media & local datasets
+data/*
+!data/.gitkeep
+*.mp4
+*.avi
+*.mov
+*.mkv

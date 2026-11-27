@@ -1,0 +1,51 @@
+canvas:
+  width: 1280
+  height: 720
+
+video:
+  source: ""
+  fps_target: 30
+  save_output: false
+  output_path: "data/output_tracked.mp4"
+
+calibration:
+  path: "configs/calibration.json"
+  num_players: 3
+
+motion_gate:
+  diff_threshold: 25
+  motion_ratio_threshold: 0.015
+  stable_frames_required: 6
+  downscale_factor: 0.5
+
+segmentation:
+  hsv_green_lower: [35, 40, 40]
+  hsv_green_upper: [90, 255, 255]
+  bgr_color_tolerance: 35.0
+  morph_open_kernel: 3
+  morph_close_kernel: 7
+  min_card_area_px: 1800
+
+card_detector:
+  face_down_min_border_l: 170.0
+  face_down_max_border_s: 55.0
+  corner_roi_width: 48
+  corner_roi_height: 72
+
+rank_recognizer:
+  templates_dir: "assets/templates"
+  ncc_threshold: 0.62
+  ambiguity_margin: 0.05
+  ten_min_aspect_ratio: 0.85
+
+tracker:
+  max_match_distance_px: 65.0
+  confirm_frames: 2
+  remove_grace_frames: 3
+  split_min_dist_px: 55.0
+  split_exact_rank_only: true
+
+hud:
+  show_zones: true
+  show_debug_mask: false
+  font_scale: 0.6
